@@ -1,0 +1,7 @@
+== Pipeline: GitHub Groovy Libraries
+
+A Jenkins Plugin that allows pipeline Groovy libraries to be loaded on the fly from GitHub.
+
+Additional resources:
+
+* https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+GitHub+Library+Plugin[Wiki page]
