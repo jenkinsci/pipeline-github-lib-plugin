@@ -25,5 +25,5 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <div>
-  Allows Pipeline Grrovy libraries to be loaded on the fly from GitHub.
+  Allows Pipeline Groovy libraries to be loaded on the fly from GitHub.
 </div>
