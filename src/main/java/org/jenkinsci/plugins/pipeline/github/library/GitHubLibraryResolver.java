@@ -47,7 +47,7 @@ import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever;
     @Override public Collection<LibraryConfiguration> forJob(Job<?,?> job, Map<String,String> libraryVersions) {
         List<LibraryConfiguration> libs = new ArrayList<>();
         for (Map.Entry<String,String> entry : libraryVersions.entrySet()) {
-            if (entry.getKey().matches("github[.]com/([^/]+)/([^/]+)")) {
+            if (entry.getKey().matches("github.([^/]+[.])?com/([^/]+)/([^/]+)")) {
                 String name = entry.getKey();
                 // Currently GitHubSCMSource offers no particular advantage here over GitSCMSource.
                 LibraryConfiguration lib = new LibraryConfiguration(name, new SCMSourceRetriever(new GitSCMSource(null, "https://" + name + ".git", "", "*", "", true)));
