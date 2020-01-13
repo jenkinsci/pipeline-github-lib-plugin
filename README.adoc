@@ -7,5 +7,4 @@ A Jenkins Plugin that allows pipeline Groovy libraries to be loaded on the fly f
 
 ## Changelog
 
-See link:./CHANGES.md[CHANGES.md].
-
+See link:./CHANGES.adoc[changelog].
