@@ -40,7 +40,7 @@ THE SOFTWARE.
 
   <name>Pipeline: GitHub Groovy Libraries</name>
   <description>Allows Pipeline Groovy libraries to be loaded on the fly from GitHub.</description>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+GitHub+Library+Plugin</url>
+  <url>https://github.com/jenkinsci/pipeline-github-lib-plugin</url>
   <licenses>
     <license>
       <name>MIT License</name>
