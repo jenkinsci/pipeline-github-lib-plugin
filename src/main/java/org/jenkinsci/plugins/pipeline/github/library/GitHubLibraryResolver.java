@@ -27,10 +27,12 @@ package org.jenkinsci.plugins.pipeline.github.library;
 import hudson.Extension;
 import hudson.model.Job;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import jenkins.plugins.git.GitSCMSource;
+import jenkins.plugins.git.traits.IgnoreOnPushNotificationTrait;
 import org.jenkinsci.plugins.workflow.libs.LibraryConfiguration;
 import org.jenkinsci.plugins.workflow.libs.LibraryResolver;
 import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever;
@@ -49,8 +51,12 @@ import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever;
         for (Map.Entry<String,String> entry : libraryVersions.entrySet()) {
             if (entry.getKey().matches("github[.]com/([^/]+)/([^/]+)")) {
                 String name = entry.getKey();
-                // Currently GitHubSCMSource offers no particular advantage here over GitSCMSource.
-                LibraryConfiguration lib = new LibraryConfiguration(name, new SCMSourceRetriever(new GitSCMSource(null, "https://" + name + ".git", "", "*", "", true)));
+                // Currently, GitHubSCMSource offers no particular advantage here over GitSCMSource.
+                GitSCMSource scm = new GitSCMSource("https://" + name + ".git");
+                scm.setTraits(Arrays.asList(
+                        new IgnoreOnPushNotificationTrait()
+                ));
+                LibraryConfiguration lib = new LibraryConfiguration(name, new SCMSourceRetriever(scm));
                 lib.setDefaultVersion("master");
                 libs.add(lib);
             }
