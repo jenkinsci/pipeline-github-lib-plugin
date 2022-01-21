@@ -35,7 +35,7 @@ THE SOFTWARE.
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>pipeline-github-lib</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Pipeline: GitHub Groovy Libraries</name>
@@ -49,13 +49,15 @@ THE SOFTWARE.
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>HEAD</tag>
+    <connection>scm:git:git://github.com/${gitHubRepo}.git</connection>
+    <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
+    <url>https://github.com/${gitHubRepo}</url>
+    <tag>${scmTag}</tag>
   </scm>
 
   <properties>
+    <changelist>999999-SNAPSHOT</changelist>
+    <gitHubRepo>jenkinsci/pipeline-github-lib-plugin</gitHubRepo>
     <bom>2.289.x</bom>
     <jenkins.version>2.289.3</jenkins.version>
     <java.level>8</java.level>
