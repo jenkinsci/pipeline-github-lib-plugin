@@ -29,7 +29,7 @@ THE SOFTWARE.
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.33</version>
+    <version>4.40</version>
     <relativePath />
   </parent>
 
@@ -40,7 +40,7 @@ THE SOFTWARE.
 
   <name>Pipeline: GitHub Groovy Libraries</name>
   <description>Allows Pipeline Groovy libraries to be loaded on the fly from GitHub.</description>
-  <url>https://github.com/jenkinsci/pipeline-github-lib-plugin</url>
+  <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
   <licenses>
     <license>
       <name>MIT License</name>
@@ -57,10 +57,8 @@ THE SOFTWARE.
 
   <properties>
     <changelist>999999-SNAPSHOT</changelist>
-    <gitHubRepo>jenkinsci/pipeline-github-lib-plugin</gitHubRepo>
-    <bom>2.289.x</bom>
-    <jenkins.version>2.289.3</jenkins.version>
-    <java.level>8</java.level>
+    <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
+    <jenkins.version>2.303.1</jenkins.version>
   </properties>
 
   <repositories>
@@ -80,8 +78,8 @@ THE SOFTWARE.
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-${bom}</artifactId>
-        <version>1117.v62a_f6a_01de98</version>
+        <artifactId>bom-2.303.x</artifactId>
+        <version>1382.v7d694476f340</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -94,8 +92,9 @@ THE SOFTWARE.
       <artifactId>git</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.jenkins-ci.plugins.workflow</groupId>
-      <artifactId>workflow-cps-global-lib</artifactId>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>pipeline-groovy-lib</artifactId>
+      <version>589.vb_a_b_4a_a_8c443c</version>
     </dependency>
   </dependencies>
 
