@@ -1,7 +1,0 @@
-== Version History
-
-// insert newest version below this comment
-
-=== Version 1.0-beta-1 (2016-12-16)
-
-- Initial release
