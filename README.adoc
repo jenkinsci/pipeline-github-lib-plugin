@@ -1,10 +1,3 @@
 == Pipeline: GitHub Groovy Libraries
 
-image:https://img.shields.io/jenkins/plugin/v/pipeline-github-lib.svg[link="https://plugins.jenkins.io/pipeline-github-lib"]
-image:https://img.shields.io/jenkins/plugin/i/pipeline-github-lib.svg[link="https://plugins.jenkins.io/pipeline-github-lib"]
-
 A Jenkins Plugin that allows pipeline Groovy libraries to be loaded on the fly from GitHub.
-
-## Changelog
-
-See link:./CHANGES.adoc[changelog].
