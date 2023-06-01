@@ -8,7 +8,7 @@ Example:
 [source,groovy]
 ----
 @Library('github.com/jglick/sample-pipeline-library') _
-if (currentBuildExt().hasChangeIn('src') {
+if (currentBuildExt().hasChangeIn('src')) {
   return
 }
 node {
