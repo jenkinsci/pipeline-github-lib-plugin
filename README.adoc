@@ -1,3 +1,19 @@
 == Pipeline: GitHub Groovy Libraries
 
-A Jenkins Plugin that allows pipeline Groovy libraries to be loaded on the fly from GitHub.
+Allows Pipeline Groovy libraries to be loaded on the fly from public repositories on GitHub.
+Unlike regular library definitions, no preconfiguration at the global or folder level is needed.
+
+Example:
+
+[source,groovy]
+----
+@Library('github.com/jglick/sample-pipeline-library') _
+if (currentBuildExt().hasChangeIn('src')) {
+  return
+}
+node {
+  sh 'make'
+}
+----
+
+link:https://www.jenkins.io/doc/book/pipeline/shared-libraries/#automatic-shared-libraries[Documentation]
